@@ -1,0 +1,36 @@
+.getmestres___container_body{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.getmestres___toolbar{
+    position: fixed;
+    z-index: 2;
+}
+.getemestres___side-nav-container{
+    flex: 1;
+    margin-top: 58px;
+   // margin-bottom: 20px;
+}
+mat-sidenav-content{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+mat-sidenav mat-nav-list {
+    min-width: 250px;
+    & 
+        .mat-list-item {
+            margin-left: 20px;
+        }
+        .mat-subheader {
+            margin-left: 0px !important;
+        }
+        .mat-subheader:first-child {
+            margin-top: 0px;
+        }
+}
