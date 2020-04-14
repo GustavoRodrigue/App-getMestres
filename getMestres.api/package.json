@@ -1,5 +1,5 @@
 {
-   "name": "getMestres.api",
+   "name": "getMestres.Api",
    "version": "0.0.1",
    "description": "Awesome project developed with TypeORM.",
    "devDependencies": {
@@ -9,12 +9,14 @@
    },
    "dependencies": {
       "body-parser": "^1.18.1",
+      "cors": "^2.8.5",
       "express": "^4.15.4",
-      "jsonwebtoken": "^8.5.1",
+      "jimp": "^0.8.5",
+      "jsonwebtoken": "^8.5.0",
       "md5": "^2.2.1",
       "mysql": "^2.14.1",
       "reflect-metadata": "^0.1.10",
-      "typeorm": "^0.2.7"
+      "typeorm": "0.2.7"
    },
    "scripts": {
       "start": "ts-node src/index.ts",

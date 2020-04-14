@@ -1,0 +1,30 @@
+<div class="container">
+    <app-input-file [image]="model.photo" (select)="selectedFile($event)"></app-input-file>
+    <mat-form-field appearance="outline" class="full-width" col-50 >
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="prencha o nome do cliente" required [(ngModel)]="model.name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width no-margin-right" col-50>
+        <mat-label>E-mail</mat-label>
+        <input [disabled]="model.uid" matInput placeholder="prencha o email" required [(ngModel)]="model.email" type="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width" col-50 *ngIf="!model.uid">
+        <mat-label>Senha</mat-label>
+        <input matInput placeholder="Informe sua nova senha" type="password" required [(ngModel)]="model.password" type="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width no-margin-right" col-50 *ngIf="!model.uid">
+        <mat-label>Confirmacao de senha</mat-label>
+        <input matInput placeholder="Digite novamente sua senha" type="password" required [(ngModel)]="model.confirmPassword" type="email">
+    </mat-form-field>
+    <section>
+        <mat-checkbox [(ngModel)]="model.isRoot">Administrador</mat-checkbox>
+    </section>
+    <div class="toolbar___form">
+        <button mat-raised-button routerLink="/users">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="save()" >Salvar</button>
+    </div>
+</div>
+
